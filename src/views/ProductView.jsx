@@ -15,30 +15,30 @@ const ProductView = {
   view: function () {
     return (
         <article>
-          <h2>{Product.current.title}</h2>
+          <h2 className={"product-title"}>{Product.current.title}</h2>
           <img src={Product.current.thumbnail} className={"product-thumbnail"}/>
-          <table>
+          <table class="striped">
             <tbody>
             <tr>
-              <td scope="row">Brand</td>
+              <td scope="column">Brand</td>
               <td>
                 <xsmall>{Product.current.brand}</xsmall>
               </td>
             </tr>
             <tr>
-              <td scope="row">Category</td>
+              <td scope="column">Category</td>
               <td>
                 <xsmall>{Product.current.category}</xsmall>
               </td>
             </tr>
             <tr>
-              <td scope="row">Description</td>
+              <td scope="column">Description</td>
               <td>
                 <xsmall>{Product.current.description}</xsmall>
               </td>
             </tr>
             <tr>
-              <td scope="row">Price</td>
+              <td scope="column">Price</td>
               <td>
                 <xsmall>{Product.current.price}</xsmall>
               </td>

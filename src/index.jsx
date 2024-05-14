@@ -1,7 +1,6 @@
 import m from "mithril";
 import { App } from "./App";
 import TestPage1 from "./views/TestPage1";
-import TestPage2 from "./views/TestPage2";
 import TestPage3 from "./views/TestPage3";
 import ProductList from "./views/ProductList";
 import ProductView from "./views/ProductView";
