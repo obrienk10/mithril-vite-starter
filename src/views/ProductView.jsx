@@ -14,7 +14,7 @@ const ProductView = {
   view: function () {
     return (
         <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content flex-col laptop:flex-row">
+          <div className="hero-content flex-col tablet:flex-row">
             <img src={Product.current.thumbnail}
                  className="max-w-xs rounded-lg shadow-2xl"/>
             <div>
