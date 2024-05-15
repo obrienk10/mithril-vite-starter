@@ -1,6 +1,5 @@
 import m from "mithril";
 import "../App.css";
-import "@picocss/pico/css/pico.green.min.css";
 
 import Product from "../models/Product";
 import mainLogo from "../img/logo64.png";
@@ -14,40 +13,60 @@ const ProductView = {
   },
   view: function () {
     return (
-        <article>
-          <h2 className={"product-title"}>{Product.current.title}</h2>
-          <img src={Product.current.thumbnail} className={"product-thumbnail"}/>
-          <table class="striped">
-            <tbody>
-            <tr>
-              <td scope="column">Brand</td>
-              <td>
-                <xsmall>{Product.current.brand}</xsmall>
-              </td>
-            </tr>
-            <tr>
-              <td scope="column">Category</td>
-              <td>
-                <xsmall>{Product.current.category}</xsmall>
-              </td>
-            </tr>
-            <tr>
-              <td scope="column">Description</td>
-              <td>
-                <xsmall>{Product.current.description}</xsmall>
-              </td>
-            </tr>
-            <tr>
-              <td scope="column">Price</td>
-              <td>
-                <xsmall>{Product.current.price}</xsmall>
-              </td>
-            </tr>
-            </tbody>
-          </table>
-        </article>
+        <div className="hero min-h-screen bg-base-200">
+          <div className="hero-content flex-col laptop:flex-row">
+            <img src={Product.current.thumbnail}
+                 className="max-w-xs rounded-lg shadow-2xl"/>
+            <div>
+              <h1 className="text-5xl font-bold">{Product.current.title}</h1>
+              <div className="flex flex-row">
+                <div className="text-lg font-medium mr-2 min-w-24">Brand</div>
+                <div className="flex-1 text-lg">
+                  {Product.current.brand}
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="text-lg font-medium mr-2 min-w-24">Category
+                </div>
+                <div className="flex-1 text-lg">
+                  {Product.current.category}
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="text-lg font-medium mr-2 min-w-24">Description
+                </div>
+                <div className="flex-1 text-lg">
+                  {Product.current.description}
+                </div>
+              </div>
+              <div className="flex flex-row">
+                <div className="text-lg font-medium mr-2 min-w-24">Price</div>
+                <div className="flex-1 text-xl font-bold">
+                  {Product.current.price}
+                </div>
+              </div>
+              <button
+                  className="mt-5 btn btn-primary mx-auto text-xl font-medium" onclick={()=>document.getElementById('my_modal_3').showModal()}>Buy
+                Now!
+              </button>
 
-    );
+              <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                  <h3 className="font-bold text-lg">NICE!</h3>
+                  <p className="py-4">Added to your shopping cart!!!</p>
+                  <div className="modal-action">
+                    <form method="dialog">
+                      {/* if there is a button, it will close the modal */}
+                      <button className="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+    )
+        ;
   }
 }
 

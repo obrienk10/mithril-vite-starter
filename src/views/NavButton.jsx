@@ -2,9 +2,9 @@ import m from "mithril";
 
 const NavButton = {
   view: ({ attrs, children }) => (
-    <a href={`#!/${attrs.path}`}>
+    <div  role="button" className="text-xl btn btn-ghost" onclick={() =>  m.route.set(attrs.path)}>
       {children}
-    </a>
+    </div>
   ),
 };
 

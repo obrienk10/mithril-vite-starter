@@ -1,7 +1,6 @@
 import m from "mithril";
 
 import "../App.css";
-import "@picocss/pico/css/pico.green.min.css";
 
 const Product = {
   list: [],

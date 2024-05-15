@@ -1,24 +1,19 @@
 import m from "mithril";
-
 import "../App.css";
-import "@picocss/pico/css/pico.green.min.css";
 
 const TestPage1 = {
-  view: ({ attrs }) => (
-      <>
-        <section>
-          <hgroup>
-            <h2>Get inspired with CSS</h2>
-            <p>How to use CSS to add glam to your Website?</p>
-          </hgroup>
-        </section>
-        <section>
-
-          <article data-theme="dark">
-            Hello
-          </article>
-        </section>
-      </>
+  view: ({attrs}) => (
+      <div className="hero min-h-96 bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">Hello there</h1>
+            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat
+              fugiat ut assumenda excepturi exercitationem quasi. In deleniti
+              eaque aut repudiandae et a id nisi.</p>
+            <button className="btn btn-primary" onclick={() => m.route.set('/products')}>Get Started</button>
+          </div>
+        </div>
+      </div>
 
   ),
 };
