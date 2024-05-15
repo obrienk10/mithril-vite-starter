@@ -2,6 +2,8 @@
 
 [Vite](https://vitejs.dev/) starter template to scaffold a new [Mithril](https://mithril.js.org/) project.
 
+Based on the project by ArthurClemens: https://github.com/ArthurClemens/mithril-vite-starter
+
 This is an unopinionated template; aside from Mithril and Vite, the rest of your project's tools are entirely up to you.
 
 ## Installation
@@ -9,7 +11,7 @@ This is an unopinionated template; aside from Mithril and Vite, the rest of your
 Pull the template files with [degit](https://github.com/Rich-Harris/degit) and install dependencies.
 
 ```
-npx degit ArthurClemens/mithril-vite-starter my-project
+npx degit obrienk10/mithril-vite-starter my-project
 cd my-project
 npm install
 ```
@@ -24,7 +26,7 @@ npm install
 
 Uncomment the `esbuild` configuration in `vite.config.js`.
 
-Example `App.jsx`:
+Example `App.jsx`: 
 
 ```jsx
 import m from "mithril";
