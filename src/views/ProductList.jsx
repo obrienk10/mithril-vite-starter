@@ -13,7 +13,7 @@ const ProductList = {
             {
               Product.list.map((product, i) =>
                   <div role="button" className="flex bg-base-300 rounded-lg my-3 btn-ghost" key={i} onclick={() => m.route.set('/product/' + product.id)}>
-                    <div  className="flex-1">
+                    <div  className="flex-1 px-6">
                       <div className="text-slate-100">
                         {product.title}
                       </div>
