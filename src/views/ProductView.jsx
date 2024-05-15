@@ -13,12 +13,12 @@ const ProductView = {
   },
   view: function () {
     return (
-        <div className="hero min-h-screen bg-base-200">
+        <div className="hero  bg-base-200">
           <div className="hero-content flex-col tablet:flex-row">
             <img src={Product.current.thumbnail}
                  className="max-w-xs rounded-lg shadow-2xl"/>
             <div>
-              <h1 className="text-5xl font-bold">{Product.current.title}</h1>
+              <h1 className="text-5xl font-bold mb-4">{Product.current.title}</h1>
               <div className="flex flex-row">
                 <div className="text-lg font-medium mr-2 min-w-24">Brand</div>
                 <div className="flex-1 text-lg">
@@ -42,7 +42,7 @@ const ProductView = {
               <div className="flex flex-row">
                 <div className="text-lg font-medium mr-2 min-w-24">Price</div>
                 <div className="flex-1 text-xl font-bold">
-                  {Product.current.price}
+                  €{Product.current.price}
                 </div>
               </div>
               <button
