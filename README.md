@@ -2,7 +2,7 @@
 
 [Vite](https://vitejs.dev/) starter template to scaffold a new [Mithril](https://mithril.js.org/) project.
 
-Based on the project by ArthurClemens: https://github.com/ArthurClemens/mithril-vite-starter
+A Mithril.js starter project using vite, JSX, Tailwind CSS and DaisyUI. Based on the project by ArthurClemens: https://github.com/ArthurClemens/mithril-vite-starter
 
 This is an unopinionated template; aside from Mithril and Vite, the rest of your project's tools are entirely up to you.
 
@@ -22,30 +22,3 @@ npm install
 * `npm run build` - Builds the application
 * `npm run preview` - Serves the build files locally at port 5000
 
-## Using JSX
-
-Uncomment the `esbuild` configuration in `vite.config.js`.
-
-Example `App.jsx`: 
-
-```jsx
-import m from "mithril";
-import "./App.css";
-
-export const App = () => {
-  // Local state ...
-  return {
-    view: () => {
-      return (
-        <>
-         <h1>My Mithril App</h1>
-        </>
-      )
-    },
-  };
-};
-```
-
-## See also
-
-- [Mithril Vite Starter (TypeScript)](https://github.com/ArthurClemens/mithril-ts-vite-starter)
